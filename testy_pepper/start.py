@@ -1,6 +1,9 @@
 import unittest
 
-# tu wrzucić importy do testów
+from open_page_and_title import OpenPage
+from check_search import CheckSearch
+from check_cookies import CheckCookies
+from check_something import Something
 
 if __name__ == '__main__':
-    main()
+    unittest.main()

@@ -19,9 +19,5 @@ class Something(TestCase):
 
         except Exception:
             self.fail('Page not found')
-        finally:
 
-        # element = self.driver.find_element_by_link_text('Komentowane')
-        # element.click()
         sleep(5)
-        # assert element == True
