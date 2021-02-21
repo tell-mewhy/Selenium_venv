@@ -17,6 +17,7 @@ class CheckNowe(TestCase):
                 EC.presence_of_element_located((By.LINK_TEXT, 'Elektronika'))
             )
             element.click()
+            self.driver.back()
             sleep(3)
         except Exception:
             self.fail('Element Nowe e.g. 3 not found')
