@@ -12,14 +12,14 @@ class CheckSearch(TestCase):
         self.driver.get(self.PAGE)
         try:
             elem = self.driver.find_element_by_xpath('//input[@name="q"]')
-            elem.click()
+            elem.submit()
         except Exception:
             self.fail('Element not found')
 
     def test_write_search(self):
-        self.driver.get(self.PAGE)
 
         try:
+            self.driver.get(self.PAGE)
             element = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, '//input[@name="q"]'))
             )
