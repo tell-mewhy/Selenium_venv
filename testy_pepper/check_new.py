@@ -13,7 +13,7 @@ class CheckNowe(TestCase):
     def test_checksearch(self):
         try:
             self.driver.get(self.PAGE)
-            klik = self.driver.find_element_by_xpath('span=[@class="btn btn--mode-primary overflow--wrap-on"]')
+            klik = self.driver.find_element_by_link_text('Nowe')
             sleep(3)
             klik.click()
             element = WebDriverWait(self.driver, 10).until(
@@ -21,6 +21,7 @@ class CheckNowe(TestCase):
             )
             element.click()
             self.driver.back()
+            
             sleep(3)
         except Exception:
             self.fail('Element Nowe e.g. 3 not found')

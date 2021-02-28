@@ -24,7 +24,7 @@ class OpenPage(TestCase):
         self.driver.get(self.PAGE)
         sleep(2)
         try:
-            elem = self.driver.find_element_by_xpath('//button[@class="btn size--all-s flex--1"]')
+            elem = self.driver.find_element_by_xpath('//button[@class="flex--grow-1"]')
         except Exception:
             self.fail('Element not found')
         elem.click()
