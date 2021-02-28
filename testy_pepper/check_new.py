@@ -13,6 +13,9 @@ class CheckNowe(TestCase):
     def test_checksearch(self):
         try:
             self.driver.get(self.PAGE)
+            klik = self.driver.find_element_by_xpath('span=[@class="btn btn--mode-primary overflow--wrap-on"]')
+            sleep(3)
+            klik.click()
             element = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.LINK_TEXT, 'Elektronika'))
             )
